@@ -16,17 +16,17 @@ while (again.ToLower() == "a")
     Console.WriteLine("************************************************************");
 
     //Vstup počáteční hodnoty - špatně
-    Console.Write("Zadejte PRVNÍ číslo číselné řady (kladné celé číslo): ");
-    int first = int.Parse(Console.ReadLine());
-    
+    //Console.Write("Zadejte PRVNÍ číslo číselné řady (kladné celé číslo): ");
+    //int first = int.Parse(Console.ReadLine());
+
 
     //Vstup počáteční hodnoty
-    // Console.Write("Zadejte PRVNÍ číslo číselné řady (kladné celé číslo): ");
-    // int first;
-    // while (!int.TryParse(Console.ReadLine(), out first))
-    // {
-    //     Console.Write("Nezadali jste celé číslo. Zadejte PRVNÍ číslo řady znovu: ");   
-    // }
+    Console.Write("Zadejte PRVNÍ číslo číselné řady (kladné celé číslo): ");
+    int first;
+    while (!int.TryParse(Console.ReadLine(), out first))
+    {
+        Console.Write("Nezadali jste celé číslo. Zadejte PRVNÍ číslo řady znovu: ");
+    }
 
 
     //Vstup konečné hodnoty
@@ -34,7 +34,7 @@ while (again.ToLower() == "a")
     int last;
     while (!int.TryParse(Console.ReadLine(), out last))
     {
-        Console.Write("Nezadali jste celé číslo. Zadejte POSLEDNÍ číslo řady znovu: ");   
+        Console.Write("Nezadali jste celé číslo. Zadejte POSLEDNÍ číslo řady znovu: ");
     }
 
 
@@ -45,13 +45,29 @@ while (again.ToLower() == "a")
     //Vstup hodnoty kroku
     Console.Write("Zadejte diferenci (kladné celé číslo): ");
     int step;
-    while (!int.TryParse(Console.ReadLine(), out step) || step <=0 )
+    while (!int.TryParse(Console.ReadLine(), out step) || step <= 0)
     {
-        Console.Write("Nezadali jste celé číslo. Zadejte diferenci znovu: ");   
+        Console.Write("Nezadali jste celé číslo. Zadejte diferenci znovu: ");
     }
+
+
+     //rekapitulace zadaných hodnot
+    Console.WriteLine();
+    Console.WriteLine("===========================================");
+    // Console.WriteLine($"První číslo : {first}");
+    // Console.WriteLine($"Poslední poslední : {last}");
+    // Console.WriteLine($"Diference (krok) : {step}");
+    Console.WriteLine($"První číslo : " + first + " ;Poslední číslo : " + last + " ;Diference (krok) : " + step);
+    Console.WriteLine("===========================================");
+    Console.WriteLine();
 
     //dotaz směrem k uživateli na opakování
     Console.WriteLine();
     Console.Write("Pokud chcete pokračovat v programu stiskněte klávesu A. Následně potvrďte klávesou ENTER.: ");
     again = Console.ReadLine() ?? "";
+
+
+
+   
+
 }
