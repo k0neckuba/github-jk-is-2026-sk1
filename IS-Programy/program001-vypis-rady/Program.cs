@@ -15,13 +15,18 @@ while (again.ToLower() == "a")
     Console.WriteLine("***********************Jakub Konečný************************");
     Console.WriteLine("************************************************************");
 
-    //Vstup počáteční hodnoty
+    //Vstup počáteční hodnoty - špatně
     Console.Write("Zadejte PRVNÍ číslo číselné řady (kladné celé číslo): ");
-    int first;
-    while (!int.TryParse(Console.ReadLine(), out first))
-    {
-        Console.Write("Nezadali jste celé číslo. Zadejte PRVNÍ číslo řady znovu: ");   
-    }
+    int first = int.Parse(Console.ReadLine());
+    
+
+    //Vstup počáteční hodnoty
+    // Console.Write("Zadejte PRVNÍ číslo číselné řady (kladné celé číslo): ");
+    // int first;
+    // while (!int.TryParse(Console.ReadLine(), out first))
+    // {
+    //     Console.Write("Nezadali jste celé číslo. Zadejte PRVNÍ číslo řady znovu: ");   
+    // }
 
 
     //Vstup konečné hodnoty
