@@ -10,7 +10,7 @@ while (again.ToLower() == "a")
 
     // Hlavička programu
     Console.WriteLine("************************************************************");
-    Console.WriteLine("************************Výpis řady**************************");
+    Console.WriteLine("************************Název programu**************************");
     Console.WriteLine("************************************************************");
     Console.WriteLine("***********************Jakub Konečný************************");
     Console.WriteLine("************************************************************");
@@ -20,34 +20,20 @@ while (again.ToLower() == "a")
     //int first = int.Parse(Console.ReadLine());
 
 
-    //Vstup počáteční hodnoty
-    Console.Write("Zadejte PRVNÍ číslo číselné řady (kladné celé číslo): ");
-    int first;
-    while (!int.TryParse(Console.ReadLine(), out first))
+    //Načtení hodnoty
+    Console.Write("Zadejte číslo číselné řady (kladné celé číslo): ");
+    int aaa;
+    while (!int.TryParse(Console.ReadLine(), out aaa))
     {
-        Console.Write("Nezadali jste celé číslo. Zadejte PRVNÍ číslo řady znovu: ");
+        Console.Write("Nezadali jste celé číslo. Zadejte číslo řady znovu: ");
     }
-
-
-    //Vstup konečné hodnoty
-    Console.Write("Zadejte POSLEDNÍ číslo číselné řady (kladné celé číslo): ");
-    int last;
-    while (!int.TryParse(Console.ReadLine(), out last))
+    
+    
+    Console.Write("Zadejte číslo číselné řady (kladné celé číslo): ");
+    int bbb;
+    while (!int.TryParse(Console.ReadLine(), out bbb))
     {
-        Console.Write("Nezadali jste celé číslo. Zadejte POSLEDNÍ číslo řady znovu: ");
-    }
-
-
-
-
-
-
-    //Vstup hodnoty kroku
-    Console.Write("Zadejte diferenci (kladné celé číslo): ");
-    int step;
-    while (!int.TryParse(Console.ReadLine(), out step) || step <= 0)
-    {
-        Console.Write("Nezadali jste celé číslo. Zadejte diferenci znovu: ");
+        Console.Write("Nezadali jste celé číslo. Zadejte číslo řady znovu: ");
     }
 
 
