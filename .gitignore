@@ -1,0 +1,11 @@
+# Výstupy sestavení .NET
+bin/
+obj/
+
+# Nastavení editorů
+.vs/
+*.user
+*.suo
+
+# macOS
+.DS_Store
