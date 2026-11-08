@@ -51,6 +51,7 @@ while(again.ToLower() == "a" )
     if (number == 0)
     {
         sum = 0;
+        soucin = 0;
     }
     else
     {
