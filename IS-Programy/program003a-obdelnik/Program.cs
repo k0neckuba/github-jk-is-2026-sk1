@@ -46,12 +46,24 @@ while(again.ToLower() == "a" )
     // Zde budeme pokračovat konkrétním algoritmem
     for (int i = 0; i < height; i++)
     {
+        if (i % 2 == 0) // Pokud to není poslední řádek, přidej nový řádek
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+        }
+        Console.WriteLine();
         for (int j = 0; j < width; j++)
         {
             Console.Write(" *");
+        System.Threading.Thread.Sleep(25); // Pauza 100 ms mezi řádky
+
         }
-        Console.WriteLine();
+        
     }
+    Console.ResetColor();
 
     // Dotaz směrem k uživateli na opakování
     Console.WriteLine();
